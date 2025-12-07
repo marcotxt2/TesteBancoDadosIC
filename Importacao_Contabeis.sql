@@ -14,7 +14,7 @@ SET GLOBAL local_infile = 1; -- Libera para o MySQL pegar os arquivos do computa
 -- Ex.: C:/Users/marco/...
 
 -- 1º Trimestre 2023
-LOAD DATA LOCAL INFILE 'C:/Users/marco/OneDrive/Documentos/4T2023/1T2023.csv'
+LOAD DATA LOCAL INFILE 'C:/TesteBancoDadosIC/Importacoes_ANS/1T2023.csv'
 INTO TABLE demonstracoes_contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';' ENCLOSED BY '"'
@@ -26,7 +26,7 @@ SET data_referencia = STR_TO_DATE(@v_data, '%Y-%m-%d'),   -- Define a data para 
     saldo_final = CAST(REPLACE(@v_saldo_final, ',', '.') AS DECIMAL(20,2)); -- Padroniza para o padrão monetário brasileiro.
 
 -- 2º Trimestre 2023
-LOAD DATA LOCAL INFILE 'C:/Users/marco/OneDrive/Documentos/4T2023/2T2023.csv'
+LOAD DATA LOCAL INFILE 'C:/TesteBancoDadosIC/Importacoes_ANS/2T2023.csv'
 INTO TABLE demonstracoes_contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';' ENCLOSED BY '"'
@@ -38,7 +38,7 @@ SET data_referencia = STR_TO_DATE(@v_data, '%Y-%m-%d'),
     saldo_final = CAST(REPLACE(@v_saldo_final, ',', '.') AS DECIMAL(20,2));
 
 -- 3º Trimestre 2023
-LOAD DATA LOCAL INFILE 'C:/Users/marco/OneDrive/Documentos/4T2023/3T2023.csv'
+LOAD DATA LOCAL INFILE 'C:/TesteBancoDadosIC/Importacoes_ANS/3T2023.csv'
 INTO TABLE demonstracoes_contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';' ENCLOSED BY '"'
@@ -50,7 +50,7 @@ SET data_referencia = STR_TO_DATE(@v_data, '%Y-%m-%d'),
     saldo_final = CAST(REPLACE(@v_saldo_final, ',', '.') AS DECIMAL(20,2));
 
 -- 4º Trimestre 2023
-LOAD DATA LOCAL INFILE 'C:/Users/marco/OneDrive/Documentos/4T2023/4T2023.csv'
+LOAD DATA LOCAL INFILE 'C:/TesteBancoDadosIC/Importacoes_ANS/4T2023.csv'
 INTO TABLE demonstracoes_contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';' ENCLOSED BY '"'
@@ -66,7 +66,7 @@ SET data_referencia = STR_TO_DATE(@v_data, '%d/%m/%Y'),  -- Por algum motivo tiv
 -- Atente-se de adicionar cada arquivo exportado conforme seu devido diretório.
     
 -- 1º Trimestre 2024
-LOAD DATA LOCAL INFILE 'C:/Users/marco/OneDrive/Documentos/4T2023/1T2024.csv'
+LOAD DATA LOCAL INFILE 'C:/TesteBancoDadosIC/Importacoes_ANS/1T2024.csv'
 INTO TABLE demonstracoes_contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';' ENCLOSED BY '"'
@@ -78,7 +78,7 @@ SET data_referencia = STR_TO_DATE(@v_data, '%Y-%m-%d'),
     saldo_final = CAST(REPLACE(@v_saldo_final, ',', '.') AS DECIMAL(20,2));
     
 -- 2º Trimestre 2024
-LOAD DATA LOCAL INFILE 'C:/Users/marco/OneDrive/Documentos/4T2023/2T2024.csv'
+LOAD DATA LOCAL INFILE 'C:/TesteBancoDadosIC/Importacoes_ANS/2T2024.csv'
 INTO TABLE demonstracoes_contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';' ENCLOSED BY '"'
@@ -90,7 +90,7 @@ SET data_referencia = STR_TO_DATE(@v_data, '%Y-%m-%d'),
     saldo_final = CAST(REPLACE(@v_saldo_final, ',', '.') AS DECIMAL(20,2));
     
 -- 3º Trimestre 2024
-LOAD DATA LOCAL INFILE 'C:/Users/marco/OneDrive/Documentos/4T2023/3T2024.csv'
+LOAD DATA LOCAL INFILE 'C:/TesteBancoDadosIC/Importacoes_ANS/3T2024.csv'
 INTO TABLE demonstracoes_contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';' ENCLOSED BY '"'
@@ -102,7 +102,7 @@ SET data_referencia = STR_TO_DATE(@v_data, '%Y-%m-%d'),
     saldo_final = CAST(REPLACE(@v_saldo_final, ',', '.') AS DECIMAL(20,2));
     
 -- 4º Trimestre 2024
-LOAD DATA LOCAL INFILE 'C:/Users/marco/OneDrive/Documentos/4T2023/4T2024.csv'
+LOAD DATA LOCAL INFILE 'C:/TesteBancoDadosIC/Importacoes_ANS/4T2024.csv'
 INTO TABLE demonstracoes_contabeis
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ';' ENCLOSED BY '"'

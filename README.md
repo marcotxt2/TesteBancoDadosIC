@@ -19,7 +19,7 @@ Este documento descreve as **configurações e cuidados necessários** para exec
 
 ## 2) Posicionamento dos arquivos exportados e path (Windows)
 
-**Regra:** coloque cada arquivo exportado (CSV) no diretório indicado nos scripts ou ajuste os caminhos nos scripts para apontar para o diretório onde os arquivos realmente estão.
+**Regra:** coloque cada arquivo exportado (CSV) no diretório indicado nos scripts ou ajuste os caminhos nos scripts para apontar para o diretório onde os arquivos realmente estão. Ou simplesmente deixe o repositório no disco local C: que fique com o diretório Ex.: "C:/TesteBancoDadosIC/Importacoes_ANS/1T2023.csv"
 
 **Atenção com barras:**
 
@@ -31,13 +31,13 @@ Este documento descreve as **configurações e cuidados necessários** para exec
 * Windows comum (original):
 
 ```
-C:\dados\exports\clientes.csv
+C:\TesteBancoDadosIC\Importacoes_ANS\1T2023.csv
 ```
 
 * Deve ficar (para MySQL):
 
 ```
-C:/dados/exports/clientes.csv
+C:/TesteBancoDadosIC/Importacoes_ANS/1T2023.csv
 ```
 
 ## Contato / Observações finais
