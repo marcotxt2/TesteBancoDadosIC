@@ -2,7 +2,7 @@
 
 CREATE TABLE IF NOT EXISTS operadoras (
     registro_operadora INT PRIMARY KEY,
-    cnpj VARCHAR(20), -- varchar é mais seguro por as vezes ter zeros a esquerda.
+    cnpj VARCHAR(20), -- varchar é mais seguro por as vezes pode ter zeros a esquerda.
     razao_social VARCHAR(255),
     nome_fantasia VARCHAR(255),
     modalidade VARCHAR(100),
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS operadoras (
     regiao_comercializacao VARCHAR(100),
     data_registro_ans DATE,
     INDEX idx_modalidade (modalidade)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; -- Assegurar que a engine a ser usada seja o InnoDB por segurança -- o UTF8MB4 é o real (UTF8) do MySQL por usar os 4 bytes
 
 CREATE TABLE IF NOT EXISTS demonstracoes_contabeis (
     id BIGINT AUTO_INCREMENT PRIMARY KEY, 
@@ -35,4 +35,4 @@ CREATE TABLE IF NOT EXISTS demonstracoes_contabeis (
     INDEX idx_data (data_referencia),
     INDEX idx_reg_ans (reg_ans),
     INDEX idx_conta (cd_conta_contabil)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;  -- Assegurar que a engine a ser usada seja o InnoDB por segurança -- o UTF8MB4 é o real (UTF8) do MySQL por usar os 4 bytes

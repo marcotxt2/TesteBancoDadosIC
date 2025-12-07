@@ -1,3 +1,5 @@
+-- Top 10 operadoras com maiores gastos com a descrição "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no ultimo trimestre (4 trimestre 2024).
+
 SELECT
 	operadoras.registro_operadora,
     operadoras.razao_social,
@@ -10,6 +12,8 @@ WHERE
 GROUP BY operadoras.registro_operadora, operadoras.razao_social
 ORDER BY sum(demonstracoes_contabeis.saldo_final) DESC LIMIT 10;
 
+-- Top 10 operadoras com maiores gastos com a descrição "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no ultimo ano (2024).
+
 SELECT
 	operadoras.registro_operadora,
     operadoras.razao_social,
@@ -18,6 +22,6 @@ FROM demonstracoes_contabeis
 JOIN operadoras ON demonstracoes_contabeis.reg_ans = operadoras.registro_operadora
 WHERE
 	demonstracoes_contabeis.descricao LIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR%'
-    AND YEAR(demonstracoes_contabeis.data_referencia) = YEAR((SELECT max(data_referencia) FROM demonstracoes_contabeis)) -- Seleciona o ultimo ano.
+    AND YEAR(demonstracoes_contabeis.data_referencia) = YEAR((SELECT max(data_referencia) FROM demonstracoes_contabeis)) -- Seleciona o ultimo ano .
 GROUP BY operadoras.registro_operadora, operadoras.razao_social
 ORDER BY sum(demonstracoes_contabeis.saldo_final) DESC LIMIT 10;
