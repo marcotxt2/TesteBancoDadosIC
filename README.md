@@ -13,15 +13,13 @@ Este documento descreve as **configurações e cuidados necessários** para exec
 * No cliente/servidor MySQL deve estar permitido o uso de `LOCAL INFILE` para que comandos como `LOAD DATA LOCAL INFILE` funcionem com arquivos locais.
 * No MySQL Workbench ou em clientes que possuam uma seção *Advanced* / *Options*, defina `OPT_LOCAL_INFILE=1` (ou marque a opção equivalente: "Enable LOCAL INFILE").
 
-**Espaço para captura de tela:**
 
 > ![INSERIR IMAGEM AQUI — captura de tela do Advanced com OPT\_LOCAL\_INFILE=1](./assets/localinfilemysql.png
 >)
-> *Substitua a imagem acima pela captura de tela do seu cliente mostrando `OPT_LOCAL_INFILE=1`.*
 
 ## 2) Posicionamento dos arquivos exportados e path (Windows ↔ UNIX)
 
-**Regra:** coloque cada arquivo exportado (CSV, TSV, etc.) no diretório indicado nos scripts ou ajuste os caminhos nos scripts para apontar para o diretório onde os arquivos realmente estão.
+**Regra:** coloque cada arquivo exportado (CSV) no diretório indicado nos scripts ou ajuste os caminhos nos scripts para apontar para o diretório onde os arquivos realmente estão.
 
 **Atenção com barras:**
 
@@ -41,12 +39,6 @@ C:\dados\exports\clientes.csv
 ```
 C:/dados/exports/clientes.csv
 ```
-
-## 4) Possíveis problemas e soluções rápidas
-
-* **Erro: "The used command is not allowed with this MySQL version"** → Ative `--local-infile=1` no cliente e/ou `local_infile=1` no servidor.
-* **Erro relacionado a `secure_file_priv`** → Se houver restrição `secure_file_priv`, o MySQL pode permitir apenas importação de arquivos dentro de um diretório específico. Neste caso, mova os arquivos para o diretório permitido ou ajuste a configuração do servidor (requer acesso de administrador).
-* **Permissões de arquivo** → Garanta que o usuário do sistema que executa o cliente MySQL tenha permissão de leitura sobre os arquivos.
 
 ## Contato / Observações finais
 
