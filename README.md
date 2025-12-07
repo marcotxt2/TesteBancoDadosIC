@@ -1,4 +1,4 @@
-# README — Como rodar os SQL scripts
+# Como rodar os SQL scripts
 
 Este documento descreve as **configurações e cuidados necessários** para executar os scripts SQL exportados neste repositório.
 
@@ -17,7 +17,7 @@ Este documento descreve as **configurações e cuidados necessários** para exec
 > ![INSERIR IMAGEM AQUI — captura de tela do Advanced com OPT\_LOCAL\_INFILE=1](./assets/localinfilemysql.png
 >)
 
-## 2) Posicionamento dos arquivos exportados e path (Windows ↔ UNIX)
+## 2) Posicionamento dos arquivos exportados e path (Windows)
 
 **Regra:** coloque cada arquivo exportado (CSV) no diretório indicado nos scripts ou ajuste os caminhos nos scripts para apontar para o diretório onde os arquivos realmente estão.
 
@@ -45,5 +45,3 @@ C:/dados/exports/clientes.csv
 Se precisar, adicione uma `issue` neste repositório com a captura de tela da sua configuração e exemplo de caminho/arquivo para que eu possa orientar um ajuste mais específico.
 
 ---
-
-*Fim do README.*
